@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -31,15 +32,31 @@ class AuthController extends Controller
             ]
         );
 
-        try {
-            DB::connection()->getPdo();
-            echo 'tudo ok!';
-        } catch (\PDOException $e) {
-            echo $e->getMessage();
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        $user = User::where('email', $email)
+                    ->where('deleted_at', null)
+                    ->first();
+
+        if(!$user) {
+            return redirect()->back()->withInput()->with('loginError', 'Email ou Senha incorretos');
         }
 
-        echo 'fim'; exit ; 
-        
+        if(!password_verify($password, $user->password)) {
+            return redirect()->back()->withInput()->with('loginError', 'Email ou Senha incorretos');
+        }
+
+        session([
+            'user' => [
+                'id' => $user->id,
+                'email' => $user->email
+            ]
+        ]);
+
+
+        echo 'login com sucesso';
+
     }
 
     public function logout () 
