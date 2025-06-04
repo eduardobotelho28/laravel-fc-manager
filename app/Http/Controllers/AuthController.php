@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -55,13 +54,14 @@ class AuthController extends Controller
         ]);
 
 
-        echo 'login com sucesso';
+        echo 'lgin com sucesso';
 
     }
 
     public function logout () 
     {
-        echo 'logout';
+        session()->forget('user');
+        return redirect()->to('/login');
     }
 
 }
