@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->string('name', 200)->nullable();
             $table->string('position', 200)->nullable();
+            $table->integer('number')->nullable();
             $table->dateTime('birth')->nullable();
             $table->string('status', 50)->nullable();
             $table->timestamps();

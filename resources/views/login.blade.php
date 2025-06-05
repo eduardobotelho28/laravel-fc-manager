@@ -12,7 +12,7 @@
                 <div class="card-body p-4">
                     <h4 class="mb-4 text-center" style="color: #FF5722;">Entrar</h4>
 
-                    <form method="POST" action="/loginSubmit">
+                    <form method="POST" action="{{url('/loginSubmit')}}">
                         @csrf
 
                         <div class="mb-3">

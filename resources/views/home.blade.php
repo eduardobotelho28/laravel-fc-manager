@@ -5,7 +5,7 @@
 <div class="min-vh-100 d-flex flex-column bg-dark text-white">
 
     {{-- Header completo: logo, descrição e botão logout alinhados horizontalmente --}}
-    <header class="p-4 border-bottom border-secondary">
+    <header class="p-4 border-secondary">
         <div class="d-flex justify-content-between align-items-center flex-wrap">
 
             {{-- Logo + nome + descrição tudo junto --}}
@@ -26,23 +26,45 @@
         </div>
     </header>
 
-    {{-- Conteúdo central com botões --}}
-    <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-center text-center px-3">
-        <div class="d-grid gap-4 w-100" style="max-width: 360px;">
-            <a href="/jogadores" class="btn btn-lg fw-bold text-white shadow" style="background-color: #FF5722; padding: 1.2rem;">
-                Gerenciar Jogadores
-            </a>
-            <a href="/partidas" class="btn btn-lg fw-bold text-white shadow" style="background-color: #FF5722; padding: 1.2rem;">
-                Gerenciar Partidas
-            </a>
-            <a href="/titulos" class="btn btn-lg fw-bold text-white shadow" style="background-color: #FF5722; padding: 1.2rem;">
-                Ver Títulos
-            </a>
+    {{-- Cards centralizados --}}
+    <main class="flex-grow-1 d-flex align-items-center justify-content-center text-center px-3">
+        <div class="d-flex flex-wrap justify-content-center gap-5 mt-5">
+
+            {{-- Card: Jogadores --}}
+            <div class="card bg-secondary text-white shadow" style="width: 280px; border: none; border-radius: 16px;">
+                <div class="card-body d-flex flex-column align-items-center py-4">
+                    <a href="/players" class="btn fw-bold text-white w-100 mb-4" style="background-color: #FF5722; font-size: 1.1rem; padding: 0.75rem;">
+                        Gerenciar Jogadores
+                    </a>
+                    <i class="fas fa-users fa-3x text-light"></i>
+                </div>
+            </div>
+
+            {{-- Card: Partidas --}}
+            <div class="card bg-secondary text-white shadow" style="width: 280px; border: none; border-radius: 16px;">
+                <div class="card-body d-flex flex-column align-items-center py-4">
+                    <a href="/partidas" class="btn fw-bold text-white w-100 mb-4" style="background-color: #FF5722; font-size: 1.1rem; padding: 0.75rem;">
+                        Gerenciar Partidas
+                    </a>
+                    <i class="fas fa-calendar-check fa-3x text-light"></i>
+                </div>
+            </div>
+
+            {{-- Card: Títulos --}}
+            <div class="card bg-secondary text-white shadow" style="width: 280px; border: none; border-radius: 16px;">
+                <div class="card-body d-flex flex-column align-items-center py-4">
+                    <a href="/titulos" class="btn fw-bold text-white w-100 mb-4" style="background-color: #FF5722; font-size: 1.1rem; padding: 0.75rem;">
+                        Ver Títulos
+                    </a>
+                    <i class="fas fa-trophy fa-3x text-light"></i>
+                </div>
+            </div>
+
         </div>
     </main>
 
     {{-- Footer --}}
-    <footer class="text-center py-3 border-top border-secondary text-secondary">
+    <footer class="text-center py-3 border-secondary text-secondary">
         &copy; {{ date('Y') }} LaravelFC. Todos os direitos reservados.
     </footer>
 
