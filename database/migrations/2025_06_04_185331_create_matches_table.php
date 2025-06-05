@@ -16,6 +16,7 @@ return new class extends Migration
             $table->dateTime('datetime');
             $table->string('against', 200);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

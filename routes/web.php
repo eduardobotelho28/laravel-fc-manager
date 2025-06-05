@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\MatchController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Middleware\CheckIsLogged;
 use App\Http\Middleware\CheckIsNotLogged;
@@ -18,6 +19,7 @@ Route::middleware([CheckIsLogged::class])->group(function () {
     Route::get('/logout', [AuthController::class, 'logout']);
     Route::get('/', [MainController::class, 'index']);
 
+    //player routes
     Route::get('/players', [PlayerController::class, 'players']);
     Route::get('/createPlayer', [PlayerController::class, 'createPlayer']);
     Route::post('/createPlayerSubmit', [PlayerController::class, 'createPlayerSubmit']);
@@ -25,5 +27,10 @@ Route::middleware([CheckIsLogged::class])->group(function () {
     Route::get('/deletePlayer/{id}', [PlayerController::class, 'deletePlayer']);
     Route::get('/changePlayerStatus/{id}/{status}', [PlayerController::class, 'changePlayerStatus']);
     Route::post('/editPlayerSubmit/{id}', [PlayerController::class, 'editPlayerSubmit']);
+
+    //matche routes
+    Route::get('/matches', [MatchController::class, 'matches']);
+    Route::get('/createMatch', [MatchController::class, 'createMatch']);
+    Route::post('/createMatchSubmit', [MatchController::class, 'createMatchSubmit']);
 });
 
