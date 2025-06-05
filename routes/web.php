@@ -23,5 +23,7 @@ Route::middleware([CheckIsLogged::class])->group(function () {
     Route::post('/createPlayerSubmit', [PlayerController::class, 'createPlayerSubmit']);
     Route::get('/editPlayer/{id}', [PlayerController::class, 'editPlayer']);
     Route::get('/deletePlayer/{id}', [PlayerController::class, 'deletePlayer']);
+    Route::get('/changePlayerStatus/{id}/{status}', [PlayerController::class, 'changePlayerStatus']);
+    Route::post('/editPlayerSubmit/{id}', [PlayerController::class, 'editPlayerSubmit']);
 });
 
