@@ -40,4 +40,12 @@ class MatchController extends Controller
 
     }
 
+    public function deleteMatch ($id)
+    {
+        $match = Game::findOrFail($id);
+        $match->delete();
+
+        return redirect('/matches');
+    }
+
 }

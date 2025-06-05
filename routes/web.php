@@ -7,6 +7,7 @@ use App\Http\Controllers\PlayerController;
 use App\Http\Middleware\CheckIsLogged;
 use App\Http\Middleware\CheckIsNotLogged;
 use Illuminate\Support\Facades\Route;
+use PhpParser\Node\Expr\Match_;
 
 //auth routes
 Route::middleware([CheckIsNotLogged::class])->group(function () {
@@ -32,5 +33,6 @@ Route::middleware([CheckIsLogged::class])->group(function () {
     Route::get('/matches', [MatchController::class, 'matches']);
     Route::get('/createMatch', [MatchController::class, 'createMatch']);
     Route::post('/createMatchSubmit', [MatchController::class, 'createMatchSubmit']);
+    Route::get('/deleteMatch/{id}', [MatchController::class, 'deleteMatch']);
 });
 
