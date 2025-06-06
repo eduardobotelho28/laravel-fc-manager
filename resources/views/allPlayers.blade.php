@@ -6,8 +6,8 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="text-white">Jogadores Cadastrados</h2>
         <div>
-            <a href="/" class="btn btn-outline-light me-2">← Voltar</a>
-            <a href="/createPlayer" class="btn" style="background-color: #FF5722; border: none; color:white">+ Novo Jogador</a>
+            <a href="{{ url('/') }}" class="btn btn-outline-light me-2">← Voltar</a>
+            <a href="{{ url('/createPlayer') }}" class="btn" style="background-color: #FF5722; border: none; color:white">+ Novo Jogador</a>
         </div>
     </div>
 

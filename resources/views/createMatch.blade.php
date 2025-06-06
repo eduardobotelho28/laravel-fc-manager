@@ -73,7 +73,7 @@
 <div class="form-container">
     <div class="form-card">
         <h2>Cadastrar Nova Partida</h2>
-        <form method="POST" action="/createMatchSubmit">
+        <form method="POST" action="{{ url('/createMatchSubmit') }}">
             @csrf
 
             <div class="mb-3">
@@ -97,7 +97,7 @@
             </div>
 
             <div class="d-flex justify-content-between">
-                <a href="/matches" class="btn btn-outline-light">Voltar</a>
+                <a href="{{ url('/matches')}}" class="btn btn-outline-light">Voltar</a>
                 <button type="submit" class="btn btn-orange">Salvar</button>
             </div>
         </form>

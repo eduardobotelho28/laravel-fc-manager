@@ -73,7 +73,7 @@
 <div class="form-container">
     <div class="form-card">
         <h2>Cadastrar Novo Jogador</h2>
-        <form method="POST" action="/createPlayerSubmit">
+        <form method="POST" action="{{ url('/createPlayerSubmit') }}">
             @csrf
 
             <div class="mb-3">
@@ -140,7 +140,7 @@
             </div>
 
             <div class="d-flex justify-content-between">
-                <a href="/players" class="btn btn-outline-light">Voltar</a>
+                <a href="{{ url('/players') }}" class="btn btn-outline-light">Voltar</a>
                 <button type="submit" class="btn btn-orange">Salvar</button>
             </div>
         </form>

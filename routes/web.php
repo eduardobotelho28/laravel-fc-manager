@@ -9,7 +9,6 @@ use App\Http\Controllers\TitleController;
 use App\Http\Middleware\CheckIsLogged;
 use App\Http\Middleware\CheckIsNotLogged;
 use Illuminate\Support\Facades\Route;
-use Termwind\Components\Li;
 
 //auth routes
 Route::middleware([CheckIsNotLogged::class])->group(function () {

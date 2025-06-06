@@ -141,7 +141,7 @@
             </div>
 
             <div class="d-flex justify-content-between">
-                <a href="/players" class="btn btn-outline-light">Voltar</a>
+                <a href="{{ url ('/players') }}" class="btn btn-outline-light">Voltar</a>
                 <button type="submit" class="btn btn-orange">Salvar</button>
             </div>
         </form>

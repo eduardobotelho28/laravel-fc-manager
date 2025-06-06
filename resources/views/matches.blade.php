@@ -6,8 +6,8 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="text-white">Partidas</h2>
         <div>
-            <a href="/" class="btn btn-outline-light me-2">← Voltar</a>
-            <a href="/createMatch" class="btn" style="background-color: #FF5722; border: none; color:white">+ Nova Partida</a>
+            <a href="{{ url('/') }}" class="btn btn-outline-light me-2">← Voltar</a>
+            <a href="{{ url('/createMatch') }}" class="btn" style="background-color: #FF5722; border: none; color:white">+ Nova Partida</a>
         </div>
     </div>
 
@@ -37,7 +37,7 @@
                                 <p class="mb-0" style="font-size: 1.2rem; color:black; !important">{{ $match->against }} x Laravel FC</p>
                             </div>
                             <a 
-                                href="{{ $isPast ? '#' : '/lineup/' . $match->id }}" 
+                                href="{{ $isPast ? '#' : url('/lineup/' . $match->id) }}" 
                                 class="btn btn-lg {{ $isPast ? 'btn-secondary' : '' }}" 
                                 style="{{ $isPast ? 'pointer-events: none; cursor: default;' : 'background-color: #FF5722; color:white; font-weight: bold;' }}"
                                 {{ $isPast ? 'disabled' : '' }}
@@ -45,7 +45,7 @@
                         </div>
                         <div class="card-footer bg-transparent border-0 d-flex justify-content-end" style="border-radius: 0 0 12px 12px;">
                             <a 
-                                href="{{ $isPast ? '#' : '/deleteMatch/' . $match->id }}" 
+                                href="{{ $isPast ? '#' : url('/deleteMatch/' . $match->id) }}" 
                                 class="btn btn-sm {{ $isPast ? 'btn-outline-secondary' : 'btn-outline-danger' }} rounded-pill" 
                                 style="{{ $isPast ? 'pointer-events: none; cursor: default;' : '' }}"
                                 {{ $isPast ? 'disabled' : '' }}
