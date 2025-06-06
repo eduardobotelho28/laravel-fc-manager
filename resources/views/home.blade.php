@@ -19,7 +19,7 @@
                 Cadastre jogadores, controle partidas e acompanhe seus títulos com praticidade e estilo.
             </p>
 
-            <a href="/logout" class="btn btn-outline-light btn-sm mt-3 mt-md-0">Logout</a>
+            <a href="{{ url('/logout') }}" class="btn btn-outline-light btn-sm mt-3 mt-md-0">Logout</a>
         </div>
     </header>
 
@@ -29,7 +29,7 @@
             {{-- Card: Jogadores --}}
             <div class="card bg-secondary text-white shadow" style="width: 280px; border: none; border-radius: 16px;">
                 <div class="card-body d-flex flex-column align-items-center py-4">
-                    <a href="/players" class="btn fw-bold text-white w-100 mb-4" style="background-color: #FF5722; font-size: 1.1rem; padding: 0.75rem;">
+                    <a href="{{ url('/players') }}" class="btn fw-bold text-white w-100 mb-4" style="background-color: #FF5722; font-size: 1.1rem; padding: 0.75rem;">
                         Gerenciar Jogadores
                     </a>
                     <i class="fas fa-users fa-3x text-light"></i>
@@ -39,7 +39,7 @@
             {{-- Card: Partidas --}}
             <div class="card bg-secondary text-white shadow" style="width: 280px; border: none; border-radius: 16px;">
                 <div class="card-body d-flex flex-column align-items-center py-4">
-                    <a href="/matches" class="btn fw-bold text-white w-100 mb-4" style="background-color: #FF5722; font-size: 1.1rem; padding: 0.75rem;">
+                    <a href="{{ url('/matches') }}" class="btn fw-bold text-white w-100 mb-4" style="background-color: #FF5722; font-size: 1.1rem; padding: 0.75rem;">
                         Gerenciar Partidas
                     </a>
                     <i class="fas fa-calendar-check fa-3x text-light"></i>
@@ -49,7 +49,7 @@
             {{-- Card: Títulos --}}
             <div class="card bg-secondary text-white shadow" style="width: 280px; border: none; border-radius: 16px;">
                 <div class="card-body d-flex flex-column align-items-center py-4">
-                    <a href="/titulos" class="btn fw-bold text-white w-100 mb-4" style="background-color: #FF5722; font-size: 1.1rem; padding: 0.75rem;">
+                    <a href="{{ url('/titles') }}" class="btn fw-bold text-white w-100 mb-4" style="background-color: #FF5722; font-size: 1.1rem; padding: 0.75rem;">
                         Ver Títulos
                     </a>
                     <i class="fas fa-trophy fa-3x text-light"></i>

@@ -5,6 +5,7 @@ use App\Http\Controllers\LineupController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MatchController;
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\TitleController;
 use App\Http\Middleware\CheckIsLogged;
 use App\Http\Middleware\CheckIsNotLogged;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +41,9 @@ Route::middleware([CheckIsLogged::class])->group(function () {
     Route::get('/lineup/{match}', [LineupController::class, 'index']); 
     Route::post('/addPlayerToLineup/{match}', [LineupController::class, 'addPlayerToLineup']);
     Route::post('/deletePlayerLineup/{match}/{player}', [LineupController::class, 'deletePlayerLineup']);
+
+    //title routes
+    Route::get('/titles', [TitleController::class, 'titles']);
 
 });
 
