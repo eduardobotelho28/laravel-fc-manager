@@ -14,7 +14,7 @@ Sistema de gerenciamento para o time fictício Laravel FC, desenvolvido como pro
 
 #### 1. Clonar o repositório
 ```bash
-git clone [URL_DO_REPOSITORIO]
+git clone https://github.com/eduardobotelho28/lavarelFC-manager
 cd laravel-fc-manager
 ```
 
