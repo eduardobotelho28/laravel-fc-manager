@@ -2,6 +2,8 @@
 
 Sistema de gerenciamento para o time fictício Laravel FC, desenvolvido como projeto acadêmico para o IFSUL Campus Charqueadas.
 
+Dentro do sistema, o usuário pode gerenciar jogadores do time, registrar as partidas e suas escalações, bem como ver os atuais títulos do clube.
+
 ## Como executar o projeto
 
 ### Pré-requisitos
