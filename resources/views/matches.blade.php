@@ -34,7 +34,7 @@
                         <div class="card-body d-flex justify-content-between align-items-center flex-wrap gap-3" style="border-radius: 12px 12px 0 0;">
                             <div>
                                 <h5 class="mb-2" style="color: #FF5722; font-weight: bold;">{{ \Carbon\Carbon::parse($match->datetime)->format('d/m/Y H:i') }}</h5>
-                                <p class="mb-0" style="font-size: 1.2rem;">{{ $match->against }} x Laravel FC</p>
+                                <p class="mb-0" style="font-size: 1.2rem; color:black; !important">{{ $match->against }} x Laravel FC</p>
                             </div>
                             <a 
                                 href="{{ $isPast ? '#' : '/lineup/' . $match->id }}" 

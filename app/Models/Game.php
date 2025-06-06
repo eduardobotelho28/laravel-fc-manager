@@ -18,4 +18,9 @@ class Game extends Model
         'updated_at' => 'datetime',
     ];
 
+    public function players() {
+        return $this->belongsToMany(Player::class, 'lineups', 'match_id', 'player_id');
+    }
+
+
 }

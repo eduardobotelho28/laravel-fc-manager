@@ -18,4 +18,8 @@ class Player extends Model
         'birth'      => 'date',
     ];
 
+    public function games() {
+        return $this->belongsToMany(Game::class, 'lineups', 'player_id', 'match_id');
+    }
+
 }
